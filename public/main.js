@@ -53,8 +53,8 @@ $(function() {
      let message = $inputMessage.val();
      if (message && connected) {
        $inputMessage.val('');
-       addChatMessage({ username, message });
-       socket.emit('new message', message);
+       addChatMessage({ username, message });//creates message from user msg = 'msg'
+       socket.emit('new message', message); //posts message to page
      }
    }
  
